@@ -2,39 +2,21 @@ const req = require('./src/requests.js');
 
 const argv = process.argv;
 const command = argv[2];
+const category = argv[3];
 
 module.exports = () => {
-    const categories = [
-        'explicit',
-        'dev',
-        'movie',
-        'food',
-        'celebrity',
-        'science',
-        'sport',
-        'political',
-        'religion',
-        'animal',
-        'history',
-        'music',
-        'travel',
-        'career',
-        'money',
-        'fashion',
-    ];
-
     switch (command) {
         case 'joke':
-            req.requestJoke();
+            if (!category) {
+                req.requestJoke().then(console.log);
+            } else {
+                req.requestJokeForCategory(category)
+                    .then(console.log)
+                    .catch((error) => console.error(error.message));
+            }
             break;
         case 'categories':
-            req.requestCategories();
+            req.requestCategories().then(console.log);
             break;
-        default:
-            categories.map((categorie) => {
-                if (categorie === command) {
-                    req.requestSpecificCategorie(categorie);
-                }
-            });
     }
 };

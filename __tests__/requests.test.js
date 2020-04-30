@@ -15,7 +15,7 @@ describe('Requests', () => {
         expect(req.requestCategories()).toBeDefined();
     });
 
-    it('Request categorie should return a specific joke based on categorie.', async () => {
-        expect(req.requestSpecificCategorie('history')).toBeDefined();
+    it('Request categorie should return a specific joke based on category.', async () => {
+        expect(req.requestJokeForCategory('history')).toBeDefined();
     });
 });
