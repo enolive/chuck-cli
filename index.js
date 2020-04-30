@@ -1,21 +1,9 @@
-const yargs = require('yargs');
-const chalk = require('chalk');
-const figlet = require('figlet');
-const inquirer = require('inquirer');
-const fetch = require('node-fetch');
-
 const req = require('./src/requests.js');
 
-const argv = yargs.argv;
-const command = process.argv[2];
+const argv = process.argv;
+const command = argv[2];
 
 module.exports = () => {
-    console.log(
-        chalk.green(
-            figlet.textSync('chuck jokes\n', { horizontalLayout: 'full' })
-        )
-    );
-
     const categories = [
         'explicit',
         'dev',
@@ -32,7 +20,7 @@ module.exports = () => {
         'travel',
         'career',
         'money',
-        'fashion'
+        'fashion',
     ];
 
     switch (command) {
@@ -43,7 +31,7 @@ module.exports = () => {
             req.requestCategories();
             break;
         default:
-            const pickedCategorie = categories.map(categorie => {
+            categories.map((categorie) => {
                 if (categorie === command) {
                     req.requestSpecificCategorie(categorie);
                 }

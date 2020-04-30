@@ -1,11 +1,10 @@
-const chalk = require('chalk');
 const fetch = require('node-fetch');
 
 const requestJoke = async () => {
     const url = 'https://api.chucknorris.io/jokes/random';
     const response = await fetch(url);
     const data = await response.json();
-    return console.log(chalk.white.bgGreen.bold(data.value));
+    return console.log(data.value);
 };
 
 const requestCategories = async () => {
@@ -13,24 +12,19 @@ const requestCategories = async () => {
     const response = await fetch(url);
     const data = await response.json();
     for (const item of data) {
-        console.log(chalk.white.bgGreen.bold(item));
+        console.log(item);
     }
 };
 
-const requestSpecificCategorie = async categorie => {
-    const url = `https://api.chucknorris.io/jokes/random?category=${categorie}`;
+const requestSpecificCategorie = async (category) => {
+    const url = `https://api.chucknorris.io/jokes/random?category=${category}`;
     const response = await fetch(url);
     const data = await response.json();
-    return console.log(chalk.white.bgGreen.bold(data.value));
-};
-
-const sum = (a, b) => {
-    return a + b;
+    return console.log(data.value);
 };
 
 module.exports = {
     requestJoke,
     requestCategories,
     requestSpecificCategorie,
-    sum,
 };
