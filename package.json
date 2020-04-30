@@ -7,7 +7,6 @@
     "lint": "eslint index.js src __tests__",
     "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
     "prepublish": "npm run test && npm run build",
-    "flow:coverage": "flow-coverage-report -i 'src/**/*.js' -t html",
     "test": "jest",
     "test:watch": "jest --watch --coverage"
   },
@@ -39,20 +38,12 @@
     "babel-preset-flow": "^6.23.0",
     "babel-preset-minify": "^0.4.3",
     "babel-preset-stage-0": "^6.24.1",
-    "chalk": "^2.4.2",
     "cross-env": "^5.2.1",
     "eslint": "^6.8.0",
     "eslint-plugin-import": "^2.20.2",
-    "figlet": "^1.4.0",
-    "flow-bin": "^0.123.0",
-    "flow-coverage-report": "^0.7.0",
-    "inquirer": "^7.1.0",
     "jest": "^25.5.2",
     "jest-cli": "^25.5.2",
-    "lint-staged": "^10.2.0",
-    "node-fetch": "^2.6.0",
-    "pre-commit": "^1.2.2",
-    "yargs": "^15.3.1"
+    "node-fetch": "^2.6.0"
   },
   "dependencies": {}
 }
