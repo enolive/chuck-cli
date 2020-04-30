@@ -1,14 +1,11 @@
 {
-    "parser": "babel-eslint",
-    "extends": [
-        "plugin:prettier/recommended"
-    ],
-    "env": {
-        "es6": true
-    },
-    "plugins": ["prettier"],
-    "rules": {
-        "prettier/prettier": "error",
-        "comma-dangle": ["error", "only-multiline"]
-    }
+  "parser": "babel-eslint",
+  "env": {
+    "es6": true
+  },
+  "rules": {
+    "comma-dangle": ["warn", "only-multiline"],
+    "semi": ["warn", "always"],
+    "quotes": ["warn", "single"]
+  }
 }
