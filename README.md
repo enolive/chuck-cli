@@ -7,7 +7,7 @@ Chuck Norris CLI is a simple cli made to hear some jokes.
 ## Installation
 
 ```sh
-$ git clone https://github.com/leonardomso/chuck-cli.git
+$ git clone git@github.com:enolive/chuck-cli.git
 $ cd chuck-cli
 $ npm install -g
 $ chuck joke
