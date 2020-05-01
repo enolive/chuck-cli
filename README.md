@@ -10,10 +10,7 @@ and also 100% unit tested!
 ## Installation
 
 ```sh
-git clone git@github.com:enolive/chuck-cli.git
-cd chuck-cli
-npm install -g
-chuck joke
+npm install -g chuck-cli-ng
 ```
 
 ## Commands
