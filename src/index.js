@@ -12,5 +12,10 @@ export const main = async (argv) => {
       }
     case 'categories':
       return requestCategories().then(console.log);
+    default:
+      console.log(`usage
+  chuck joke [<category>]     # displays a random joke. lets you choose the <category> optionally
+  chuck categories            # displays the available categories
+`);
   }
 };
