@@ -1,5 +1,5 @@
-const fetchMock = require('jest-fetch-mock');
-const req = require('../src/requests.js');
+import req from '../src/requests.js';
+import fetchMock from 'jest-fetch-mock';
 
 beforeEach(() => fetchMock.resetMocks());
 

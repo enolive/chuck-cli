@@ -4,6 +4,9 @@
             "presets": ["env"],
             "plugins": ["add-module-exports"]
         },
+      "test": {
+        "plugins": ["@babel/plugin-transform-modules-commonjs"]
+      },
         "production": {
             "presets": ["env", "minify"],
             "plugins": ["add-module-exports"]
