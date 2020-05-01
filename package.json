@@ -1,6 +1,6 @@
 {
   "name": "chuck-cli-ng",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "🤠 a simple cli to hear some chuck norris jokes",
   "main": "lib/index.js",
   "scripts": {
