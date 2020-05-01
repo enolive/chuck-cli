@@ -2,13 +2,16 @@
   "name": "chuck-cli-ng",
   "version": "1.0.0",
   "description": "🤠 a simple cli to hear some chuck norris jokes",
-  "main": "src/index.js",
+  "main": "lib/index.js",
   "scripts": {
     "lint": "eslint src __tests__",
     "build": "babel src --out-dir lib",
     "prepublish": "npm run test && npm run build",
     "test": "jest",
     "test:watch": "jest --watch --coverage"
+  },
+  "directories": {
+
   },
   "keywords": [
     "chuck",

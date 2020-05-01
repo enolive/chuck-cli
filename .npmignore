@@ -1,0 +1,7 @@
+src/
+__tests__/
+.idea/
+setupTests.js
+babel.config.js
+.eslintrc.json
+*.tgz
