@@ -1,13 +1,13 @@
-const fetch = require('node-fetch');
+import fetch from 'node-fetch';
 
-const requestJoke = async () => {
+export const requestJoke = async () => {
   const url = 'https://api.chucknorris.io/jokes/random';
   const response = await fetch(url);
   const data = await response.json();
   return data.value;
 };
 
-const requestJokeForCategory = async (category) => {
+export const requestJokeForCategory = async (category) => {
   const categories = await requestCategories();
   const [found] = await categories.filter((c) => c === category);
   if (!found) {
@@ -16,7 +16,7 @@ const requestJokeForCategory = async (category) => {
   return requestSpecificCategory(found);
 };
 
-const requestCategories = async () => {
+export const requestCategories = async () => {
   const url = 'https://api.chucknorris.io/jokes/categories';
   const response = await fetch(url);
   return await response.json();
@@ -27,10 +27,4 @@ const requestSpecificCategory = async (category) => {
   const response = await fetch(url);
   const data = await response.json();
   return data.value;
-};
-
-module.exports = {
-  requestJoke,
-  requestJokeForCategory,
-  requestCategories,
 };
